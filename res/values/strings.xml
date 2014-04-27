@@ -9,5 +9,6 @@
     <string name="title_activity_scanner">Scanner</string>
     <string name="search">Buch Suchen</string>
     <string name="map">Map</string>
+    <string name="title_activity_map">MapActivity</string>
 
 </resources>

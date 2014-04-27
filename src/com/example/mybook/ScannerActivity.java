@@ -3,10 +3,6 @@ package com.example.mybook;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -14,7 +10,7 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class ScannerActivity extends Activity{
 
-	private Button scanBtn;
+	//private Button scanBtn;
 	public String scanresult;
 
 	@Override
@@ -52,7 +48,7 @@ public class ScannerActivity extends Activity{
 			//get content from Intent Result
 			String scanContent = scanningResult.getContents();
 			//get format name of data scanned
-			String scanFormat = scanningResult.getFormatName();
+			//String scanFormat = scanningResult.getFormatName();
 			//Log.v("SCAN", "content: "+scanContent+" - format: "+scanFormat);
 			
 			Intent resultintent = new Intent();
