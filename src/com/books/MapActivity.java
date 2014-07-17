@@ -50,23 +50,20 @@ public class MapActivity extends Activity implements LocationListener {
 		userIcon = R.drawable.location;
 		shopIcon = R.drawable.location_place;
 
-		this.mapFragment = MapFragment.newInstance();
+		mapFragment = MapFragment.newInstance();
 		getFragmentManager().beginTransaction()
-				.add(R.id.the_map, this.mapFragment).commit();
+				.add(R.id.the_map, mapFragment).commit();
 	}
 
 	protected void onStart() {
 		super.onStart();
 		// check if map allready exists
-		// if(theMap==null){
-		// get the map
-		// theMap =
-		// ((MapFragment)getFragmentManager().findFragmentById(R.id.the_map)).getMap();
-		this.theMap = this.mapFragment.getMap();
+		
+		theMap = mapFragment.getMap();
 		// check in case map/ Google Play services not available
 		if (this.theMap != null) {
 			// ok - proceed
-			this.theMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+			theMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 			// create marker array
 			placeMarkers = new Marker[MAX_PLACES];
 			// update location
@@ -297,7 +294,7 @@ public class MapActivity extends Activity implements LocationListener {
 			startActivity(i);
 			break;
 		default:
-			Log.d("onOptionsItemSelected", "es wurde nichts aufgewählt");
+			Log.d("onOptionsItemSelected", "es wurde nichts aufgewï¿½hlt");
 		}
 		return super.onOptionsItemSelected(item);
 
